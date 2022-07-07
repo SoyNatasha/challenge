@@ -15,7 +15,10 @@ return new class extends Migration
     {
         Schema::create('vuelos', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('ciudadOrigen');
+            $table->string('ciudadDestino');
+            $table->string('aerolinea');
+            $table->timestamps('');
         });
     }
 
