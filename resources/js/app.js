@@ -8,7 +8,16 @@ require('./bootstrap');
 
 window.Vue = require('vue').default;
 
+import VueRouter from 'vue-router';
+
+Vue.use(VueRouter);
+
+//import myApp from './components/App.vue';
+import buscadorIndex from './components/ExampleComponent.vue';
+import resultadosIndex from './components/Resultados.vue';
+
 import BootstrapVue from 'bootstrap-vue';
+
 
 Vue.use(BootstrapVue);
 
@@ -25,6 +34,22 @@ Vue.use(BootstrapVue);
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
+
+const routes = [
+
+    {
+        path: '/resultados',
+        component: resultadosIndex
+    }
+  ];
+
+const router = new VueRouter({
+    mode:'history',
+    routes:routes
+});
+
+//new Vue(Vue.util.extend({ router }, myApp)).$mount('#app');
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -32,5 +57,5 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  */
 
 const app = new Vue({
-    el: '#app',
+    el: '#app'
 });
