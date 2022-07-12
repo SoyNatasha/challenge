@@ -17,10 +17,10 @@
                 ></b-form-input>
 
                 <label for="example-datepicker">Fecha de Salida</label>
-                <b-form-datepicker id="example-datepicker" v-model="value" class="mb-2"></b-form-datepicker>
+                <b-form-datepicker id="example-datepicker"  class="mb-2"></b-form-datepicker>
                 
                 <label for="example-datepicker">Fecha de Retorno</label>
-                <b-form-datepicker id="example-datepicker" v-model="value" class="mb-2"></b-form-datepicker>
+                <b-form-datepicker id="example-datepicker"  class="mb-2"></b-form-datepicker>
 
                 <b-link to="/resultados" variant="primary">Buscar</b-link>
             </b-form>
@@ -29,9 +29,5 @@
 </template>
 
 <script>
-    export default {
-        mounted() {
-            console.log('Component mounted.')
-        }
-    }
+
 </script>
