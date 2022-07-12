@@ -4,25 +4,25 @@
             <b-card-group deck>
                 <b-card
                     border-variant="primary"
-                    header="Primary"
+                    header="Vuelo 1"
                     header-bg-variant="primary"
                     header-text-variant="white"
                     align="center"
                 >
-                    <b-card-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b-card-text>
+                    <b-card-text>{{ data }}</b-card-text>
                 </b-card>
 
                 <b-card
                     border-variant="secondary"
-                    header="Secondary"
+                    header="Vuelo 2"
                     header-border-variant="secondary"
                     align="center"
                 >
-                    <b-card-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b-card-text>
+                    <b-card-text>{{ data }}</b-card-text>
                 </b-card>
 
-                <b-card border-variant="success" header="Success" align="center">
-                    <b-card-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b-card-text>
+                <b-card border-variant="success" header="Vuelo 3" align="center">
+                    <b-card-text>{{ data }}</b-card-text>
                 </b-card>
                 </b-card-group>
             </div>
@@ -32,8 +32,11 @@
 
 <script>
     export default {
-        mounted() {
-            console.log('Component mounted.')
+        name:'app',
+        computed: {
+            data() {
+                return 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+            }
         }
     }
 </script>
